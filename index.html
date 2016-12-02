@@ -1,129 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/style.css">
-    <title>Riverside Web Developer | Kia Farhang</title>
-</head>
-
-<body>
-    <section id="top">
-        <div id="name-image">
-            <img src="img/kf.jpg" alt="Kia Farhang">
-            <h2>Kia Farhang</h2>
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta name="description" content="Kia Farhang is a JavaScript web developer in Riverside focused on clean, elegant design.">
+<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+<link href="dist/css/style.css" rel="stylesheet">
+<title>Web Developer in Riverside | Kia Farhang</title>
+<section id="top">
+    <div id="name-image"><img alt="Kia Farhang" src="img/kf.jpg">
+        <h2>Kia Farhang</h2></div>
+    <div id="about">
+        <p>Hi! I'm a web developer living in Southern California. I worked as a journalist before entering the web world, and I currently split my time between coding and writing at <a href="https://www.lemonadestand.org/" title="Lemonade Stand" target="_blank">the marketing agency Lemonade Stand.</a></p>
+        <p>My dream job is to build web applications, and you can see some of my work below. That's about as many "I-me-my" sentences as I can take.</p>
+        <p>Shoot me an email or check me out on GitHub.</p>
+        <div id="contact"><a href="mailto:kfarhang0@gmail.com" title="Email Kia at kfarhang0@gmail.com"><i class="icon-mail-alt"></i></a> <a href="https://github.com/KiaFarhang" title="Kia Farhang on GitHub" target="_blank"><i class="icon-github"></i></a> <a href="https://www.linkedin.com/in/kia-farhang-68423966" title="My LinkedIn page" target="_blank"><i class="icon-linkedin-squared"></i></a></div>
+    </div>
+</section>
+<section id="portfolio">
+    <h3>My Work</h3>
+    <div id="displayZone"></div>
+    <div class="work">
+        <h4>Yalla Chrome Extension</h4>
+        <div class="hide">
+            <figure>
+                <a href="https://chrome.google.com/webstore/detail/yalla/jhlpghijadgjojbpepmkegbbefgnioeo" title="Yalla Chrome extension" target="_blank"><img alt="Yalla Chrome extension" src="img/yext.gif"></a>
+                <figcaption>Chrome extension</figcaption>
+            </figure>
+            <p><a href="https://yallahq.com" title="Yalla" target="_blank">Yalla</a> is a new project management app built internally at Lemonade Stand. My Chrome extension lets users add priorities for themselves or others from anywhere on the web. Basically an on-demand web form, the extension bundles a user's priority details and sends them to the Yalla priority-creation API. <a href="https://github.com/KiaFarhang/yallaExt" title="Yalla Chrome extension on GitHub" target="_blank">Code available on GitHub.</a> <a href="https://chrome.google.com/webstore/detail/yalla/jhlpghijadgjojbpepmkegbbefgnioeo" title="Yalla Chrome extension" target="_blank">Extension live on the Chrome web store.</a></p>
         </div>
-        <div id="about">
-            <p>Hi! I'm a web developer living in Southern California. I worked as a journalist before entering the web world, and I currently split my time between writing and web design at <a href="https://www.lemonadestand.org/" target="_blank" title="Lemonade Stand">the marketing agency Lemonade Stand.</a></p>
-            <p>My dream job is to build web applications, and you can see some of my work below. That's about as many "I-me-my" sentences as I can take.</p>
-            <p>Shoot me an email or check me out on GitHub.</p>
-            <div id="contact">
-                <a href="mailto:kfarhang0@gmail.com" title="Email Kia at kfarhang0@gmail.com"><i class="icon-mail-alt"></i></a>
-                <a href="https://github.com/KiaFarhang" title="Kia Farhang on GitHub" target="_blank"><i class="icon-github"></i></a>
-                <a href="https://www.linkedin.com/in/kia-farhang-68423966" title="My LinkedIn page" target="_blank"><i class="icon-linkedin-squared"></i></a>
-            </div>
+    </div>
+    <div class="work">
+        <h4>SEO Keyword Generator</h4>
+        <div class="hide">
+            <figure>
+                <a href="https://www.yallahq.com/keyword-generator" title="SEO Keyword Generator" target="_blank"><img alt="SEO Keyword Generator" src="img/key.png"></a>
+                <figcaption>Web app</figcaption>
+            </figure>
+            <p>Generating lists of SEO keywords with slight variations is a boring exercise in copy and paste. <a href="https://www.yallahq.com/keyword-generator" title="SEO Keyword Generator" target="_blank">I coded this tool</a> to make it simpler. This one-page web application uses JavaScript string manipulation to spit out variations on whatever combinations of terms and locations you throw at it. Lemonade Stand is marketing it to other agencies under the Yalla brand.</p>
         </div>
-    </section>
-    <section id="portfolio">
-        <h3>Web Design/Writing</h3>
-        <div id="displayZone"></div>
-        <div class="work">
-            <h4>KG Essentials</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://kgessentials.yourlemonadestand.com/" target="_blank" title="KG Essentials"><img src="img/kg.png" alt="KG Essentials Website"></a>
-                    <figcaption>Wordpress e-commerce site</figcaption>
-                </figure>
-                <p>This is a work in progress for a Lemonade Stand client of Lemonade Stand. I designed and coded the site and wrote the filler text you'll see on it. Though I have to give credit to another designer - she picked way better hero images than I did!</p>
-            </div>
+    </div>
+    <div class="work">
+        <h4>Node.js Grocery List</h4>
+        <div class="hide">
+            <figure>
+                <a href="https://node-grocery-list.herokuapp.com/" title="Node.js Grocery List" target="_blank"><img alt="Node.js Grocery List" src="img/node.jpg"></a>
+                <figcaption>One-page Node app</figcaption>
+            </figure>
+            <p>First exercise in Node and Express. The grocery list exists as a JSON file on the server, which the page script parses any time someone visits the app. Adding and removing items triggers POST requests to the API I set up. <a href="https://node-grocery-list.herokuapp.com/" title="Node.js Grocery List" target="_blank">Hosted on Heroku.</a> <a href="https://github.com/KiaFarhang/grocery-list" title="Node grocery list on GitHub" target="_blank">Code available on GitHub.</a>(There's no user authentication, so please don't fill it with swear words.)</p>
         </div>
-        <div class="work">
-            <h4>Paulina Rojas</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://paulinaastridrojas.com/" target="_blank" title="Paulina Rojas"><img src="img/pr.png" alt="Paulina Rojas website"></a>
-                    <figcaption>Personal portfolio site</figcaption>
-                </figure>
-                <p>I used to work as a reporter, another industry where your portfolio is everything. So when I started coding I figured I'd build some simple one-page sites for other reporters I knew to help them out. I thought I was was <em>so cool</em> when I got the scroll-up JavaScript working here.</p>
-            </div>
+    </div>
+    <div class="work">
+        <h4>Swiss Army Notebook</h4>
+        <div class="hide">
+            <figure>
+                <a href="https://chrome.google.com/webstore/detail/swiss-army-notebook/hlbcccckmdljmcigplbhkjdafjhbknec" title="Swiss Army Notebook Chrome extension" target="_blank"><img alt="Swiss Army Notebook Chrome extension" src="img/san.png"></a>
+                <figcaption>Chrome extension</figcaption>
+            </figure>
+            <p>This extension is designed to make reporters' lives easier. It taps into Merriam-Webster's APIs to give you a one-click thesaurus and dictionary, binds some new keyboard shortcuts to Chrome and lets users batch-search competitors' websites on Google. Code what you know, right?</p>
         </div>
-        <div class="work">
-            <h4>Elftmann Tactical</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://www.elftactical.com/" target="_blank" title="Elftmann Tactical"><img src="img/elf.png" alt="Elftmann Tactical Website"></a>
-                    <figcaption>3dcart e-commerce site</figcaption>
-                </figure>
-                <p>I built this site with the other developer at Guntraband. We probably spent twice as long fighting against 3dcart than we did designing it. Lesson learned.</p>
-            </div>
+    </div>
+    <div class="work">
+        <h4>Paulina Rojas</h4>
+        <div class="hide">
+            <figure>
+                <a href="http://paulinaastridrojas.com/" title="Paulina Rojas" target="_blank"><img alt="Paulina Rojas website" src="img/pr.png"></a>
+                <figcaption>Personal portfolio site</figcaption>
+            </figure>
+            <p>I used to work as a reporter, another industry where your portfolio is everything. So when I started coding I figured I'd build some simple one-page sites for other reporters I knew to help them out. I thought I was was <em>so cool</em> when I got the scroll-up JavaScript working here.</p>
         </div>
-        <div class="work">
-            <h4>Lemonade Stand</h4>
-            <div class="hide">
-                <figure>
-                    <a href="https://www.lemonadestand.org/corona-internet-marketing/" target="_blank" title="Lemonade Stand landing pages"><img src="img/ls.png" alt="Lemonade Stand landing page"></a>
-                    <figcaption>SEO Landing Pages</figcaption>
-                </figure>
-                <p>I designed and wrote content for eight SEO landing pages promoting Lemonade Stand's services. I also redesigned and rewrote the company's "services" pages explaining all the work we do for clients.</p>
-            </div>
+    </div>
+    <div class="work">
+        <h4>Anne Millerbernd</h4>
+        <div class="hide">
+            <figure>
+                <a href="http://amillerbernd.com/" title="Anne Millebernd" target="_blank"><img alt="Anne Millerbernd website" src="img/am.png"></a>
+                <figcaption>Personal portfolio site</figcaption>
+            </figure>
+            <p>Another journalist's portfolio. She works on data visualizations a lot, and I struggled with how best to embed them into the page. If I could do it over I'd use Flexbox over Bootstrap, definitely.</p>
         </div>
-        <div class="work">
-            <h4>Anne Millerbernd</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://amillerbernd.com/" target="_blank" title="Anne Millebernd"><img src="img/am.png" alt="Anne Millerbernd website"></a>
-                    <figcaption>Personal portfolio site</figcaption>
-                </figure>
-                <p>Another journalist's portfolio. She works on data visualizations a lot, and I struggled with how best to embed them into the page. If I could do it over I'd use Flexbox over Bootstrap, definitely.</p>
-            </div>
-        </div>
-        <div class="work">
-            <h4>RighTime Home Services</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://www.rightimeservices.com/plumbing/clogged-drains/" target="_blank" title="RighTime Home Services"><img src="img/rt.png" alt="RighTime Home Services writing"></a>
-                    <figcaption>Content writing</figcaption>
-                </figure>
-                <p>We recently redesigned this client's website at Lemonade Stand. They needed several new pages describing their various plumbing services, and I used to write for a living. So it worked out! I enjoy writing and I'm always happy to handle that aspect of web development.</p>
-            </div>
-        </div>
-        <h3>JavaScript</h3>
-        <div class="work">
-            <h4>Graphite</h4>
-            <div class="hide">
-                <figure>
-                    <a href="https://chrome.google.com/webstore/detail/graphite/lfnmcfecglbmcjkcnahihffkemmgjblg" target="_blank" title="Graphite Chrome extension"><img src="img/gra.png" alt="Graphite Chrome extension"></a>
-                    <figcaption>Chrome extension</figcaption>
-                </figure>
-                <p>Hey, my first extension! This one is really simple - if you're on a page with a pure-white or pure-black background, it adds a little gray to make it easier on your eyes. Sitting at a cool three downloads as I type this.</p>
-            </div>
-        </div>
-        <div class="work">
-            <h4>Telegram Generator</h4>
-            <div class="hide">
-                <figure>
-                    <a href="https://kiafarhang.github.io/telegram-generator/" target="_blank" title="Telegram Generator"><img src="img/tel.png" alt="JavaScript Telegram Generator"></a>
-                    <figcaption>JavaScript utility</figcaption>
-                </figure>
-                <p>Ah...The first place my mind went when I learned about string manipulation. It's exactly what you'd think it is: "Hi, my name is Kia." becomes "HI MY NAME IS KIA STOP."</p>
-            </div>
-        </div>
-        <div class="work">
-            <h4>Grocery List Web App</h4>
-            <div class="hide">
-                <figure>
-                    <a href="http://kiafarhang.com/grocery/grocery.html" target="_blank" title="Grocery List Web App"><img src="img/gr.png" alt="JavaScript Grocery List App"></a>
-                    <figcaption>JavaScript + PHP app</figcaption>
-                </figure>
-                <p>My first web app. I worked through a tutorial on building a to-do list and figured a grocery list would be more useful. My girlfriend and I actually use a version of this when we go shopping.</p>
-            </div>
-        </div>
-    </section>
-    <section></section>
-    <section></section>
-    <script src="dist/js/script.js"></script>
-</body>
-
-</html>
+    </div>
+</section>
+<script src="dist/js/script.js"></script>

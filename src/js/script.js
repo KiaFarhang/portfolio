@@ -17,8 +17,6 @@ function toggleDisplayMobile(e) {
     var contents = div.getElementsByTagName('div');
     var content = contents[0];
     var heading = div.firstChild.nextSibling;
-    console.log(heading);
-
     content.classList.toggle('show');
     heading.classList.toggle('selected');
 }
@@ -32,25 +30,17 @@ function toggleDisplay(e) {
     var content = contents[0];
     var heading = div.firstChild.nextSibling;
     var display = document.getElementById('displayZone');
-    // var captions = display.querySelectorAll('img');
-    // var caption = captions[0];
-    // console.log(caption);
 
 
     if (display.firstChild) {
         if (isAlreadyDisplayed(display)) {
             display.removeChild(display.firstChild);
-            // heading.classList.toggle('selected');
         } else {
             display.removeChild(display.firstChild);
             addThisContent(content);
-            // heading.classList.toggle('selected');
-            // caption.scrollIntoView(false);
         }
     } else {
         addThisContent(content);
-        // heading.classList.toggle('selected');
-        // caption.scrollIntoView(false);
     }
 
 
