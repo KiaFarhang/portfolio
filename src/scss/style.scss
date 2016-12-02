@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../../font/fontello.eot?98115244');
+    src: url('../../font/fontello.eot?98115244#iefix') format('embedded-opentype'), url('../../font/fontello.woff2?98115244') format('woff2'), url('../../font/fontello.woff?98115244') format('woff'), url('../../font/fontello.ttf?98115244') format('truetype'), url('../../font/fontello.svg?98115244#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail-alt:before {
+    content: '\f0e0';
+}
+
+.icon-github:before {
+    content: '\f113';
+}
+
+.icon-linkedin-squared:before {
+    content: '\f30c';
+}
+
+$primaryBlack: #262626;
+$primaryWhite: #EDEDED;
+$primaryRed: #FF1C16;
+body {
+    background: $primaryWhite;
+    background-image: url('../../img/gp.png');
+    color: $primaryBlack;
+    font-family: Arial;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0 auto;
+    width: 90%;
+}
+
+section#top {
+    text-align: center;
+    img {
+        border-radius: 40%;
+        height: 12em;
+        margin-top: 2em;
+        max-width: auto;
+    }
+    h2 {
+        font-family: 'Allerta Stencil', sans-serif;
+        font-size: 200%;
+    }
+    p {
+        margin: 1em 0;
+        text-align: left;
+    }
+    div#contact {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        a {
+            color: $primaryBlack;
+            i {
+                font-size: 200%;
+                transition: color 1.5s ease;
+                &:hover {
+                    color: $primaryRed;
+                }
+            }
+        }
+    }
+}
+
+section#portfolio {
+    display: flex;
+    flex-direction: column;
+    h3 {
+        font-family: 'Allerta Stencil', sans-serif;
+        font-size: 130%;
+        text-align: center;
+    }
+    figure {
+        figcaption {
+            font-weight: bold;
+            padding: .5em;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    div.work {
+        cursor: pointer;
+        h4 {
+            background: $primaryBlack;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px $primaryBlack;
+            color: $primaryWhite;
+            margin: .75em 0;
+            padding: .5em;
+            &.selected {
+                background: #3F2C2C;
+                box-shadow: 2px 2px 5px #3F2C2C;
+            }
+        }
+    }
+}
+
+.hide {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.35s ease;
+}
+
+.show {
+    max-height: 100em;
+}
+
+@media screen and (min-width: 768px) {
+    section#top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3em;
+        div {
+            flex-basis: 50%;
+        }
+        p,
+        img {
+            margin-top: 2em;
+        }
+        div#contact {
+            // justify-content: space-between;
+        }
+    }
+    div#displayZone {
+        div.show {
+            max-height: 100em;
+            max-width: 65%;
+            margin: 2em auto;
+            figcaption {}
+        }
+    }
+    section#portfolio {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        h3 {
+            flex-basis: 100%;
+        }
+        div.work {
+            flex-basis: 33%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {}
