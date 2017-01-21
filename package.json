@@ -1,18 +1,31 @@
 {
-  "name": "kia_farhang_portfolio",
-  "version": "1.0.0",
-  "description": "Kia Farhang's portfolio website",
-  "author": "Kia Farhang",
+  "name": "Kia_Farhang",
+  "version": "0.0.1",
+  "description": "Personal website for Kia Farhang",
+  "main": "server.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "keywords": [],
+  "repository": "https://github.com/KiaFarhang/portfolio",
+  "author": "Kia Farhang <kfarhang0@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.79.0",
+    "serve-favicon": "^2.3.2"
   }
 }
