@@ -28,12 +28,11 @@ gulp.task('js-workflow', function() {
     gulp.src(['./src/js/**/util.js', './src/js/**/script.js'])
         .pipe(concat('script.js'))
         .pipe(babel({
-            presets: ['es2015']
+            presets: ['es2016', 'react']
         }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
-});
-
+}); 
 
 gulp.task('watch', function() {
     gulp.watch('./src/scss/**/*.scss', ['css-workflow']);
@@ -42,14 +41,14 @@ gulp.task('watch', function() {
 
 gulp.task('nodemon', function() {
     nodemon({
-            script: 'server.js',
-            ext: 'js scss html',
-            env: {
-                'NODE_ENV': 'development'
-            },
-            ignore: ['dist/**/**'],
-            tasks: ['css-workflow', 'js-workflow']
-        })
+        script: 'server.js',
+        ext: 'js scss html',
+        env: {
+            'NODE_ENV': 'development'
+        },
+        ignore: ['dist/**/**'],
+        tasks: ['css-workflow', 'js-workflow']
+    })
 });
 
 gulp.task('default', ['nodemon']);

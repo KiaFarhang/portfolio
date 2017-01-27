@@ -1,5 +1,11 @@
 'use strict';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+    <h1>test</h1>, document.getElementById('test'));
+
 var items = document.querySelectorAll('h4');
 
 if (screen.width < 768) {
@@ -20,8 +26,6 @@ function toggleDisplayMobile(e) {
     content.classList.toggle('show');
     heading.classList.toggle('selected');
 }
-
-
 
 function toggleDisplay(e) {
 

@@ -1,1 +1,69 @@
-"use strict";function toggleDisplayMobile(e){var t=e.target.parentElement,i=t.getElementsByTagName("div"),l=i[0],s=t.firstChild.nextSibling;l.classList.toggle("show"),s.classList.toggle("selected")}function toggleDisplay(e){function t(e){var t=document.createDocumentFragment();t.appendChild(e.cloneNode(!0)),t.firstChild.classList.toggle("show"),a.appendChild(t)}function i(e){var t=e.getElementsByTagName("p"),i=t[0],l=n.getElementsByTagName("p"),s=l[0];return i.isEqualNode(s)}var l=e.target.parentElement,s=l.getElementsByTagName("div"),n=s[0],a=(l.firstChild.nextSibling,document.getElementById("displayZone"));a.firstChild?i(a)?a.removeChild(a.firstChild):(a.removeChild(a.firstChild),t(n)):t(n)}var items=document.querySelectorAll("h4");if(screen.width<768)for(var i=0;i<items.length;i++)items[i].addEventListener("click",toggleDisplayMobile);else for(var _i=0;_i<items.length;_i++)items[_i].addEventListener("click",toggleDisplay);
+'use strict';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(React.createElement(
+    'h1',
+    null,
+    'test'
+), document.getElementById('test'));
+
+var items = document.querySelectorAll('h4');
+
+if (screen.width < 768) {
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('click', toggleDisplayMobile);
+    }
+} else {
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('click', toggleDisplay);
+    }
+}
+
+function toggleDisplayMobile(e) {
+    var div = e.target.parentElement;
+    var contents = div.getElementsByTagName('div');
+    var content = contents[0];
+    var heading = div.firstChild.nextSibling;
+    content.classList.toggle('show');
+    heading.classList.toggle('selected');
+}
+
+function toggleDisplay(e) {
+
+    var div = e.target.parentElement;
+    var contents = div.getElementsByTagName('div');
+    var content = contents[0];
+    var heading = div.firstChild.nextSibling;
+    var display = document.getElementById('displayZone');
+
+    if (display.firstChild) {
+        if (isAlreadyDisplayed(display)) {
+            display.removeChild(display.firstChild);
+        } else {
+            display.removeChild(display.firstChild);
+            addThisContent(content);
+        }
+    } else {
+        addThisContent(content);
+    }
+
+    function addThisContent(e) {
+        var fragment = document.createDocumentFragment();
+        fragment.appendChild(e.cloneNode(true));
+
+        fragment.firstChild.classList.toggle('show');
+
+        display.appendChild(fragment);
+    }
+
+    function isAlreadyDisplayed(e) {
+        var displayedText = e.getElementsByTagName('p');
+        var oldText = displayedText[0];
+        var otherText = content.getElementsByTagName('p');
+        var newText = otherText[0];
+
+        return oldText.isEqualNode(newText);
+    }
+}
